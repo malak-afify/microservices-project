@@ -20,7 +20,7 @@ spec:
     spec:
     containers:
         - name: backend
-          image: microservices-frontend:1.0
+          image: microservices-backend:1.0
           imagePullPolicy: IfNotPresent
 
           ports:
