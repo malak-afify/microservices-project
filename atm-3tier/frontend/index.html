@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delta Bank ATM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="atm" id="atm" aria-label="Delta Bank ATM">
+    <div class="plate">
+      <span class="brand">Delta Bank</span>
+      <div class="themes" id="themes" role="group" aria-label="Colour theme">
+        <button type="button" class="swatch" data-theme="violet" aria-label="Violet theme" aria-pressed="true"></button>
+        <button type="button" class="swatch" data-theme="ocean" aria-label="Blue theme" aria-pressed="false"></button>
+        <button type="button" class="swatch" data-theme="rose" aria-label="Pink theme" aria-pressed="false"></button>
+        <button type="button" class="swatch" data-theme="mint" aria-label="Green theme" aria-pressed="false"></button>
+      </div>
+    </div>
+
+    <section class="fascia">
+      <div class="keys keys-left" id="keysLeft"></div>
+
+      <div class="screen" aria-live="polite">
+        <header class="screen-head"><h1 id="title"></h1></header>
+        <div class="screen-grid" id="grid">
+          <div class="body" id="body"></div>
+        </div>
+      </div>
+
+      <div class="keys keys-right" id="keysRight"></div>
+    </section>
+
+    <section class="lower">
+      <div class="pad" id="pad">
+        <button type="button" data-key="1">1</button>
+        <button type="button" data-key="2">2</button>
+        <button type="button" data-key="3">3</button>
+        <button type="button" class="cancel" data-key="cancel">Cancel</button>
+        <button type="button" data-key="4">4</button>
+        <button type="button" data-key="5">5</button>
+        <button type="button" data-key="6">6</button>
+        <button type="button" class="clear" data-key="clear">Clear</button>
+        <button type="button" data-key="7">7</button>
+        <button type="button" data-key="8">8</button>
+        <button type="button" data-key="9">9</button>
+        <button type="button" class="enter" data-key="enter">Enter</button>
+        <span></span>
+        <button type="button" data-key="0">0</button>
+        <button type="button" data-key="back" aria-label="Delete last digit">&#9003;</button>
+      </div>
+
+      <div class="hardware">
+        <div class="unit">
+          <button type="button" class="slot" id="slot" aria-label="Insert card">
+            <span class="led"></span>
+            <span class="slot-mouth"></span>
+          </button>
+          <span class="cap">Card slot</span>
+        </div>
+        <div class="unit">
+          <div class="tray" id="tray" aria-hidden="true">
+            <div class="notes"><i></i><i></i><i></i></div>
+            <div class="flap"></div>
+          </div>
+          <span class="cap">Cash tray</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
