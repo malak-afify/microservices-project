@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+  labels:
+    app: backend-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend-app
+  template:
+    metadata:
+      labels:
+        app: backend-app
+    spec:
+      containers:
+      - name: backend
+        image: malakafify/atm-backend:v1      
+        ports:
+        - containerPort: 5000
+        env:
+        - name: DB_HOST
+          value: "db-service"
+        - name: DB_PORT
+          value: "5432"
+        - name: DB_NAME
+          value: "atm_db"
+        - name: DB_USER
+          value: "atm_user"
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: db-secret
+              key: password
