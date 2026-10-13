@@ -4,7 +4,7 @@ A 3-tier ATM web application containerized with Docker and deployed on Kubernete
 
 I built this project to put everything I learned in my DevOps course into one real, end-to-end project: Linux, Git, Docker, Kubernetes, and AWS.
 
-![Architecture](docs/architecture.png)
+![Architecture](architecture.png)
 
 ## Architecture
 
@@ -29,7 +29,7 @@ I built this project to put everything I learned in my DevOps course into one re
 - SSH access uses a key pair (`.pem`), with port 22 limited to my IP in the security group.
 
 ## Project Structure
-
+![Architecture](deployment-roadmap.png)
 > Adjust the names to match your repo.
 
 ```
@@ -39,3 +39,5 @@ I built this project to put everything I learned in my DevOps course into one re
 ├── k8s/             # Kubernetes manifests (Deployments, Services, Ingress, ConfigMap, Secret)
 ├── docs/            # Architecture diagram
 └── README.md
+
+
